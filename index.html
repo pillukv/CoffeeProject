@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang= "en">
+  <head>
+    <title>Coffee Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <style>
+    /*Plant Theme
+        Red: #670000
+        Green: #360
+        Light-Green: #93dc4c
+        Dark: #291400
+        Light: #ffec8b
+    */
+
+    /*FONTS*/
+      /*Ultra*/
+    @font-face{
+      font-family: Ultra;
+      src: url(Fonts/Ultra/Ultra-Regular.ttf);
+    }
+      /*Fugaz One*/
+    @font-face{
+      font-family: Fugaz;
+      src: url(Fonts/Fugaz_One/FugazOne-Regular.ttf);
+    }
+      /*Titillium*/
+    @font-face{
+      font-family: Titillium-Bold;
+      src: url(Fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+    }
+    @font-face{
+      font-family: Titillium-Italic;
+      src: url(Fonts/Titillium_Web/TitilliumWeb-Italic.ttf);
+    }
+    @font-face{
+      font-family: Titillium-Light;
+      src: url(Fonts/Titillium_Web/TitilliumWeb-Light.ttf);
+    }
+    @font-face{
+      font-family: Titillium-Regular;
+      src: url(Fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+    }
+    @font-face{
+      font-family: Titillium-SemiBold;
+      src: url(Fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf);
+    }
+    </style>
+
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-light" style="background-color: #93dc4c;">
+        <a class="navbar-brand" href="#" style="font-family:Ultra; color:#291400;">
+          Coffee Website
+        </a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search Data" aria-label="Search">
+          <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </nav>
+  </header>
+  <main>
+    <div class="jumbotron jumbotron-fluid" style="background-color:#360;">
+      <div class="container">
+        <h1 class="display-4 text-center" style="font-family:Ultra;">Coffee Agricultural Data.</h1>
+        <p class="lead text-center" style="font-family:Fugaz;">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Sources</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-dark">Go to source</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-dark">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="table table-sm table-striped table-dark" style="background-color:#291400;">
+  <thead>
+    <tr style="background-color:#670000;">
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+  </main>
+  </body>
+
+</html>

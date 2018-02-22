@@ -1,0 +1,42 @@
+
+      /*Plant Theme
+          Red: #670000
+          Green: #360
+          Light-Green: #93dc4c
+          Dark: #291400
+          Light: #ffec8b
+      */
+
+  .nav-link{
+    color:#ffec8b;
+    font-family:Fugaz;
+    font-size:22px;
+  }
+
+  .display-4,.lead{
+    color:#ffec8b;
+  }
+
+  /*BUTTONS*/
+  .btn{
+    font-family:Fugaz;
+  }
+  .btn-dark {
+    background-color: #291400;
+    color: #ffec8b;
+  }
+  .btn-dark:hover{
+    background-color: #ffec8b;
+    color: #291400;
+  }
+  .btn-light{
+    background-color: #ffec8b;
+    color: #291400;
+  }
+  .btn-light:hover{
+    background-color: #291400;
+    color: #ffec8b;
+  }
+  .btn-link{
+    color:#291400;
+  }
