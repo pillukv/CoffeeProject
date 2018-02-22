@@ -1,2 +1,1 @@
-# CoffeeProject
-CWEB 1111 Team Project
+# Coffee_UI-UX
