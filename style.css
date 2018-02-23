@@ -10,6 +10,7 @@
   .nav-link{
     color:#ffec8b;
     font-family: 'Fugaz One', Georgia;
+    font-family:Fugaz;
     font-size:22px;
   }
 
@@ -20,6 +21,7 @@
   /*BUTTONS*/
   .btn{
     font-family: 'Fugaz One', Georgia;
+    font-family:Fugaz;
   }
   .btn-dark {
     background-color: #291400;
