@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -61,9 +62,15 @@
         <a class="navbar-brand" href="#" style="font-family:Ultra; color:#291400;">
           Coffee Website
         </a>
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto" style="flex-direction:row;">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -99,37 +106,36 @@
         </div>
       </div>
     </div>
-    <table class="table table-sm table-striped table-dark" style="background-color:#291400;">
-  <thead>
-    <tr style="background-color:#670000;">
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+    <div style="width:35em;margin:auto;">
+      <div class="container-fluid" id="charts-container">
+        <div class="chart-item">
+          <h1>Chart 1</h1>
+          <p>This is a description of the chart</p>
+            <div class="chart-holder">
+              <!--Insert Chart Element Here-->
+              <h1>Chart element here</h1>
+            </div>
+        </div>
+        <div class="chart-item">
+          <h1>Chart 1</h1>
+          <p>This is a description of the chart</p>
+            <div class="chart-holder">
+              <!--Insert Chart Element Here-->
+              <h1>Chart element here</h1>
+            </div>
+        </div>
+        <div class="chart-item">
+          <h1>Chart 1</h1>
+          <p>This is a description of the chart</p>
+            <div class="chart-holder">
+              <!--Insert Chart Element Here-->
+              <h1>Chart element here</h1>
+            </div>
+        </div>
+      </div>
+  </div>
   </main>
+    <script type="text/javascript" src="testJS.js"></script>
   </body>
 
 </html>
