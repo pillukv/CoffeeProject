@@ -64,68 +64,63 @@
         </a>
         <ul class="navbar-nav mr-auto" style="flex-direction:row;">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Sources</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Data</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search Data" aria-label="Search">
-          <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
       </nav>
   </header>
   <main>
-    <div class="jumbotron jumbotron-fluid" style="background-color:#360;">
+    <div class="jumbotron jumbotron-fluid" id="jumbo" style="background-color:#360;">
       <div class="container">
-        <h1 class="display-4 text-center" style="font-family:Ultra;">Coffee Agricultural Data.</h1>
+        <h1 id="jumboHeader" class="display-4 text-center" style="font-family:Ultra;">Coffee Agricultural Data.</h1>
         <p class="lead text-center" style="font-family:Fugaz;">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         <div class="row">
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">Sources</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-dark">Go to source</a>
+                <p class="card-text">Click here to view the 'Sources' section of the page.</p>
+                <a href="#" class="btn btn-dark">Go To Source</a>
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-dark">Go somewhere</a>
+                <h5 class="card-title">Charts</h5>
+                <p class="card-text">Click here to view the 'Charts' section of the page.</p>
+                <a href="#" class="btn btn-dark">Go To Charts</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div style="width:35em;margin:auto;">
       <div class="container-fluid" id="charts-container">
-        <div class="chart-item">
-          <h1>Chart 1</h1>
+        <div class="chart-item" id="chart1">
+          <h1>Global Coffee Production</h1>
           <p>This is a description of the chart</p>
             <div class="chart-holder">
               <!--Insert Chart Element Here-->
               <h1>Chart element here</h1>
             </div>
         </div>
-        <div class="chart-item">
-          <h1>Chart 1</h1>
+        <div class="chart-item" id="chart2">
+          <h1>Global Coffee Consumption</h1>
           <p>This is a description of the chart</p>
             <div class="chart-holder">
               <!--Insert Chart Element Here-->
               <h1>Chart element here</h1>
             </div>
         </div>
-        <div class="chart-item">
-          <h1>Chart 1</h1>
+        <div class="chart-item" id="chart3">
+          <h1>Trade: Import and Export</h1>
           <p>This is a description of the chart</p>
             <div class="chart-holder">
               <!--Insert Chart Element Here-->
@@ -133,9 +128,28 @@
             </div>
         </div>
       </div>
+  <div id="Sources">
+    <div class="source">
+      <h1>Source1</h1>
+      <a href="#">Link to source</a>
+      <p>This is a description of the source</p>
+    </div>
+    <div class="source">
+      <h1>Source1</h1>
+      <a href="#">Link to source</a>
+      <p>This is a description of the source</p>
+    </div>
+    <div class="source">
+      <h1>Source1</h1>
+      <a href="#">Link to source</a>
+      <p>This is a description of the source</p>
+    </div>
   </div>
   </main>
+  <footer>
+    <p>Coffee Website</p>
+  </footer>
     <script type="text/javascript" src="testJS.js"></script>
-  </body>
+</body>
 
 </html>
