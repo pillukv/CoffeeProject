@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <style>
+
+  h1,h2,h3,h4{
+    text-align:left;
+  }
+  p{
+    text-align:left;
+  }
+  tr,th,td{
+    border:1px solid black;
+  }
+  th {
+    font-family: Hind-Med;
+  }
+  td {
+    font-family: Hind-Regular;
+  }
+  .theme{
+    border:1px solid black;
+    margin-top:2vh;
+  }
+
+  .container-fluid #headers{
+    float:left;
+    width:35%;
+  }
+  .container-fluid #para{
+    float:left;
+    width:25%;
+  }
+  .container-fluid #forms{
+    float:left;
+    width:40%;
+  }
+
+  /*THEMES*/
+    /*Break Theme
+        Blue: #567496
+        Pale: #dbbe93
+        Tan: #b28b50
+        Chocolate: #723f2e
+        Dark: #331c14
+    */
+  #break{
+    background-color: #567496;
+  }
+  #break h1{
+    color:#dbbe93;
+    font-family:Cherry-Bold;
+  }
+  #break h2{
+    font-size:25px;
+    color:#dbbe93;
+    font-family:Cherry-Bold;
+  }
+  #break p{
+    color:#331c14;
+    font-family:Cherry-Regular;
+  }
+  #break table{
+    background-color:#dbbe93;
+  }
+  #break th{
+    color:#331c14;
+    font-family:Cherry-Regular;
+  }
+  #break td{
+    color:#331c14;
+  }
+
+  #break_02{
+    background-color: #567496;
+  }
+  #break_02 h1{
+    color:#dbbe93;
+    font-family:Fugaz;
+  }
+  #break_02 h2{
+    font-size:25px;
+    color:#dbbe93;
+    font-family:Fugaz;
+  }
+  #break_02 p{
+    color:#331c14;
+    font-family:Titillium-Bold;
+  }
+  #break_02 table{
+    background-color:#dbbe93;
+  }
+  #break_02 th{
+    color:#331c14;
+    font-family:Titillium-Bold;
+  }
+  #break_02 td{
+    color:#331c14;
+  }
+
+
+    /*Cream Theme
+        Pale: #fff69b
+        Tan: #e7bd57
+        Brown: #6b3b00
+        Chocolate: #5c2a00
+        Dark: #401a00
+    */
+    #cream{
+      background-color: #fff69b;
+    }
+    #cream h1{
+      color:#401a00;
+      font-family:Fugaz;
+    }
+    #cream h2{
+      font-size:25px;
+      color:#401a00;
+      font-family:Fugaz;
+    }
+    #cream p{
+      color:#5c2a00;
+      font-family:Titillium-Bold;
+    }
+    #cream table{
+      background-color:#401a00;
+    }
+    #cream th{
+      color:#fff69b;
+      font-family:Titillium-Bold;
+    }
+    #cream td{
+      color:#fff69b;
+    }
+
+    #cream_02{
+      background-color: #fff69b;
+    }
+    #cream_02 h1{
+      color:#401a00;
+      font-family:Ultra;
+    }
+    #cream_02 h2{
+      font-size:25px;
+      color:#401a00;
+      font-family:Ultra;
+    }
+    #cream_02 p{
+      color:#5c2a00;
+      font-family:Fugaz;
+    }
+    #cream_02 table{
+      background-color:#401a00;
+    }
+    #cream_02 th{
+      color:#fff69b;
+      font-family:Fugaz;
+    }
+    #cream_02 td{
+      color:#fff69b;
+    }
+
+    #cream_dark{
+      background-color: #401a00;
+    }
+    #cream_dark h1{
+      color:#fff69b;
+      font-family:Ultra;
+    }
+    #cream_dark h2{
+      font-size:25px;
+      color:#fff69b;
+      font-family:Ultra;
+    }
+    #cream_dark p{
+      color:#e7bd57;
+      font-family:Fugaz;
+    }
+    #cream_dark table{
+      background-color:#e7bd57;
+    }
+    #cream_dark th{
+      color:#401a00;
+      font-family:Fugaz;
+    }
+    #cream_dark td{
+      color:#401a00;
+    }
+    /*Plant Theme
+        Red: #670000
+        Green: #360
+        Light-Green: #93dc4c
+        Dark: #291400
+        Light: #ffec8b
+    */
+    #plant{
+      background-color: #ffec8b;
+    }
+    #plant h1{
+      color:#670000;
+      font-family:Ultra;
+    }
+    #plant h2{
+      font-size:25px;
+      color:#291400;
+      font-family:Ultra;
+    }
+    #plant p{
+      color:#291400;
+      font-family:Fugaz;
+    }
+    #plant table{
+      background-color:#291400;
+    }
+    #plant th{
+      color:#93dc4c;
+      font-family:Fugaz;
+    }
+    #plant td{
+      color:#ffec8b;
+    }
+    /*Lounge Theme
+        Chocolate: #592c19
+        Light-Brown: #b0713e
+        Tan: #c99942
+        White-Grey: #d6cfaf
+        Navy-Green: #333322
+    */
+
+    /*Moustache Theme
+        White: #eeebe8
+        Velvet: #5c2223
+        Blue: #22405c
+        Chocolate: #5c3e22
+        Dark-Brown: #372514
+    */
+
+  /*FONT-FAMILIES*/
+    /*Anonymous*/
+  @font-face{
+    font-family: Anonymous-Bold;
+    src: url(Fonts/Anonymous_Pro/AnonymousPro-Bold.ttf);
+  }
+  @font-face{
+    font-family: Anonymous-Bold-Italic;
+    src: url(Fonts/Anonymous_Pro/AnonymousPro-BoldItalic.ttf);
+  }
+  @font-face{
+    font-family: Anonymous-Italic;
+    src: url(Fonts/Anonymous_Pro/AnonymousPro-Italic.ttf);
+  }
+  @font-face{
+    font-family: Anonymous-Regular;
+    src: url(Fonts/Anonymous_Pro/AnonymousPro-Regular.ttf);
+  }
+    /*CherrySwash*/
+  @font-face{
+    font-family: Cherry-Bold;
+    src: url(Fonts/Cherry_Swash/CherrySwash-Bold.ttf);
+  }
+  @font-face{
+    font-family: Cherry-Regular;
+    src: url(Fonts/Cherry_Swash/CherrySwash-Regular.ttf);
+  }
+    /*Fugaz One*/
+  @font-face{
+    font-family: Fugaz;
+    src: url(Fonts/Fugaz_One/FugazOne-Regular.ttf);
+  }
+    /*Hind*/
+  @font-face{
+    font-family: Hind-Bold;
+    src: url(Fonts/Hind/Hind-Bold.ttf);
+  }
+  @font-face{
+    font-family: Hind-Light;
+    src: url(Fonts/Hind/Hind-Light.ttf);
+  }
+  @font-face{
+    font-family: Hind-Med;
+    src: url(Fonts/Hind/Hind-Medium.ttf);
+  }
+  @font-face{
+    font-family: Hind-Regular;
+    src: url(Fonts/Hind/Hind-Regular.ttf);
+  }
+  @font-face{
+    font-family: Hind-SemiBold;
+    src: url(Fonts/Hind/Hind-SemiBold.ttf);
+  }
+    /*Inconsolata*/
+  @font-face{
+    font-family: Incon-Bold;
+    src: url(Fonts/Inconsolata/Inconsolata-Bold.ttf);
+  }
+  @font-face{
+    font-family: Incon-Regular;
+    src: url(Fonts/Inconsolata/Inconsolata-Regular.ttf);
+  }
+    /*Titillium*/
+  @font-face{
+    font-family: Titillium-Bold;
+    src: url(Fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+  }
+  @font-face{
+    font-family: Titillium-Italic;
+    src: url(Fonts/Titillium_Web/TitilliumWeb-Italic.ttf);
+  }
+  @font-face{
+    font-family: Titillium-Light;
+    src: url(Fonts/Titillium_Web/TitilliumWeb-Light.ttf);
+  }
+  @font-face{
+    font-family: Titillium-Regular;
+    src: url(Fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+  }
+  @font-face{
+    font-family: Titillium-SemiBold;
+    src: url(Fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf);
+  }
+    /*Ultra*/
+  @font-face{
+    font-family: Ultra;
+    src: url(Fonts/Ultra/Ultra-Regular.ttf);
+  }
+
+  </style>
+</head>
+<body>
+
+<div id="break" class="theme" class="container-fluid">
+  <div id="headers" class="container">
+  <img src="Themes/Break.png" style="float:right;width: 20%;border: 1px solid black;">
+  <h1>Break Theme</h1>
+  <h2>Font: CherrySwash</h2>
+  </div>
+  <div id="para" class="container">
+  <p>The quick brown fox jumped over the lazy dog.</p>
+  <p style="color:#dbbe93;">The quick brown fox jumped over the lazy dog.</p>
+  </div>
+  <div id="forms" class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" style="font-family:Cherry-Bold; background-color:#723f2e;">Button01</button>
+    <button type="button" class="btn btn-light" style="font-family:Cherry-Bold;color:#331c14;">Button02</button>
+    <button type="button" class="btn btn-link" style="font-family:Hind-Light;color:#dbbe93;">Button03</button>
+  </div>
+</div>
+
+<div id="break_02" class="theme" class="container-fluid">
+  <div id="headers" class="container">
+  <img src="Themes/Break.png" style="float:right;width: 20%;border: 1px solid black;">
+  <h1>Break Theme 02</h1>
+  <h2>Font: Fugaz</h2>
+  </div>
+  <div id="para" class="container">
+  <p>The quick brown fox jumped over the lazy dog.</p>
+  <p style="color:#dbbe93;">The quick brown fox jumped over the lazy dog.</p>
+  </div>
+  <div id="forms" class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" style="font-family:Titillium-Bold; background-color:#723f2e;">Button01</button>
+    <button type="button" class="btn btn-light" style="font-family:Titillium-Bold;color:#331c14;">Button02</button>
+    <button type="button" class="btn btn-link" style="font-family:Titillium-Regular;color:#dbbe93;">Button03</button>
+  </div>
+</div>
+
+<div id="cream" class="theme" class="container-fluid">
+  <div id="headers" class="container">
+  <img src="Themes/Cream.png" style="float:right;width: 20%;border: 1px solid black;">
+  <h1>Cream Theme</h1>
+  <h2>Font: Fugaz</h2>
+  </div>
+  <div id="para" class="container">
+  <p>The quick brown fox jumped over the lazy dog.</p>
+  <p style="color:#401a00;">The quick brown fox jumped over the lazy dog.</p>
+  </div>
+  <div id="forms" class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" style="font-family:Titillium-Bold; background-color:#401a00;">Button01</button>
+    <button type="button" class="btn btn-light" style="font-family:Titillium-Bold;color:#331c14;background-color:#e7bd57;">Button02</button>
+    <button type="button" class="btn btn-link" style="font-family:Titillium-Regular;color:#401a00;">Button03</button>
+  </div>
+</div>
+
+<div id="cream_02" class="theme" class="container-fluid">
+  <div id="headers" class="container">
+  <img src="Themes/Cream.png" style="float:right;width: 20%;border: 1px solid black;">
+  <h1>Cream Theme 02</h1>
+  <h2>Font: Ultra</h2>
+  </div>
+  <div id="para" class="container">
+  <p>The quick brown fox jumped over the lazy dog.</p>
+  <p style="color:#401a00;">The quick brown fox jumped over the lazy dog.</p>
+  </div>
+  <div id="forms" class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" style="font-family:Fugaz; background-color:#401a00;">Button01</button>
+    <button type="button" class="btn btn-light" style="font-family:Fugaz;color:#331c14;background-color:#e7bd57;">Button02</button>
+    <button type="button" class="btn btn-link" style="font-family:Titillium-Regular;color:#401a00;">Button03</button>
+  </div>
+</div>
+
+<div id="cream_dark" class="theme" class="container-fluid">
+  <div id="headers" class="container">
+  <img src="Themes/Cream.png" style="float:right;width: 20%;border: 1px solid black;">
+  <h1>Cream Theme Dark</h1>
+  <h2>Font: Ultra</h2>
+  </div>
+  <div id="para" class="container">
+  <p>The quick brown fox jumped over the lazy dog.</p>
+  <p style="color:#fff69b;">The quick brown fox jumped over the lazy dog.</p>
+  </div>
+  <div id="forms" class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" style="font-family:Fugaz; background-color:#401a00;">Button01</button>
+    <button type="button" class="btn btn-light" style="font-family:Fugaz;color:#331c14;background-color:#e7bd57;">Button02</button>
+    <button type="button" class="btn btn-link" style="font-family:Titillium-Regular;color:#401a00;">Button03</button>
+  </div>
+</div>
+
+<div id="plant" class="theme" class="container-fluid">
+  <div id="headers" class="container">
+  <img src="Themes/Plant.png" style="float:right;width: 20%;border: 1px solid black;">
+  <h1>Plant Theme</h1>
+  <h2>Font: Ultra</h2>
+  </div>
+  <div id="para" class="container">
+  <p>The quick brown fox jumped over the lazy dog.</p>
+  <p style="color:#670000;">The quick brown fox jumped over the lazy dog.</p>
+  </div>
+  <div id="forms" class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+        <tr>
+          <td>Value 01</td>
+          <td>Value 02</td>
+          <td>Value 03</td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" style="font-family:Fugaz; background-color:#291400;">Button01</button>
+    <button type="button" class="btn btn-light" style="font-family:Fugaz;color:#291400;background-color:#ffec8b;">Button02</button>
+    <button type="button" class="btn btn-link" style="font-family:Titillium-Regular;color:#401a00;">Button03</button>
+  </div>
+</div>
+
+</body>
+</html>
