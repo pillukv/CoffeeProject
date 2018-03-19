@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -100,21 +100,40 @@
         </div>
       </div>
       <div class="imageWrapper">
-        <img src="bean_warehouse.png" style="width:100%;" alt="Bagged Coffee Beans in a Warehouse">
+        <img src="style/images/bean_warehouse.png" style="width:100%;" alt="Bagged Coffee Beans in a Warehouse">
       </div>
       <div class="chart-item" id="chart2">
         <h1>Global Coffee Production</h1>
-        <p style="text-align:center; padding:2em;">2017 data provided by the United States Department of Agriculture allows us to explore global production of coffee by looking at volume of green beans grown, exported, imported and consumed.  You will discover two types of distinct coffee varieties. The Arabica, known for its refined sweet flavor and high acidity and the Robusta, known to have a bitter sharp flavor that produces some of the most desired top quality espresso.  Making famous the Italian Espresso with its thick and flavorful crema. 
+        <p style="text-align:center; padding:2em 2em 0 2em;">2017 data provided by the United States Department of Agriculture allows us to explore global production of coffee by looking at volume of green beans grown, exported, imported and consumed.  You will discover two types of distinct coffee varieties. The Arabica, known for its refined sweet flavor and high acidity and the Robusta, known to have a bitter sharp flavor that produces some of the most desired top quality espresso.  Making famous the Italian Espresso with its thick and flavorful crema. 
           The Arabica variety makes up 60% of the coffee grown globally and almost exclusively represents the gourmet market.  This commodity often comes at a higher price point and tends to be overall a more fragile plant.  The Robusta variety makes up the other 37-40% of production and thought to provide a greater crop yield at a lower production price point.<br><br>
-          This chart shows the Robusta and Arabica production of the world's biggest coffee growers, measured in 60kg bags.
+          This chart will show the Robusta and Arabica production of the world's biggest coffee growers, measured in 60kg bags.  Select a year to view the data:
         </p>
-
-          <div class="chart-holder">
-              <canvas id="barChart"></canvas>
-          </div>
+        <form style="display:inline;">
+          <select id="productionyearselect">
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+          </select>
+          <button id="yearinput" name="yearinput" type="button">View</button>
+        </form>
+        <div class="chart-holder">
+            <canvas id="barChart"></canvas>
+        </div>
       </div>
       <div class="imageWrapper">
-        <img src="coffeefields_Columbia.PNG" style="width:100%;" alt="Coffee Fields in Colombia">
+        <img src="style/images/coffeefields_Columbia.PNG" style="width:100%;" alt="Coffee Fields in Colombia">
       </div>
       <div class="chart-item" id="chart3">
         <h1>Trade: Import and Export</h1>
@@ -154,7 +173,7 @@
       </div>
   
   </footer>
-  <script src="charts.js"></script>
+  <script src="js/charts.js"></script>
 </body>
 
 </html>
