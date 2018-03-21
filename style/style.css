@@ -26,15 +26,15 @@
 
   /*GENERAL*/
   h1{
-    font-family: 'Ultra';
+    font-family: Ultra;
     color:#291400;
   }
   h5{
-    font-family: 'Fugaz One', Georgia;
+    font-family: Fugaz, Georgia;
     color:#670000;
   }
   p, form {
-    font-family: 'Fugaz One', Georgia;
+    font-family: Fugaz, Georgia;
     color:#291400;
   }
   /*HEADER*/
@@ -45,8 +45,7 @@
   /*NAV*/
   .nav-link{
     color:#ffec8b;
-    font-family: 'Fugaz One', Georgia;
-    font-family:Fugaz;
+    font-family: Fugaz, Georgia;
     font-size:22px;
   }
 
@@ -90,18 +89,17 @@
     border-radius:5px;
   }
   .chart-item h1{
-    font-family:Ultra;
+    font-family: Ultra;
     color:#291400;
   }
   .chart-item p{
-    font-family:Fugaz;
+    font-family: Fugaz;
     color:#291400;
   }
 
   /*BUTTONS*/
   .btn{
-    font-family: 'Fugaz One', Georgia;
-    font-family:Fugaz;
+    font-family: Fugaz, Georgia;
   }
   .btn-dark {
     background-color: #291400;
@@ -124,7 +122,7 @@
   }
 
   /*SOURCES*/
-  #Sources{
+  #sources{
     width:70%;
     margin:auto;
     border-top:1px solid black;

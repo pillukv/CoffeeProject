@@ -8,12 +8,17 @@
     <meta name="Author" content="Luke Pilon, Angie Toner, Will Pellegrene">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+    <!-- JavaScript Tools Used: -->
+    <!-- Google Charts -->
     <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!-- BootStrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Charts.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <style>
     /*Plant Theme
@@ -28,33 +33,33 @@
       /*Ultra*/
     @font-face{
       font-family: Ultra;
-      src: url(Fonts/Ultra/Ultra-Regular.ttf);
+      src: url(fonts/Ultra/Ultra-Regular.ttf);
     }
       /*Fugaz One*/
     @font-face{
       font-family: Fugaz;
-      src: url(Fonts/Fugaz_One/FugazOne-Regular.ttf);
+      src: url(fonts/Fugaz_One/FugazOne-Regular.ttf);
     }
       /*Titillium*/
     @font-face{
       font-family: Titillium-Bold;
-      src: url(Fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+      src: url(fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
     }
     @font-face{
       font-family: Titillium-Italic;
-      src: url(Fonts/Titillium_Web/TitilliumWeb-Italic.ttf);
+      src: url(fonts/Titillium_Web/TitilliumWeb-Italic.ttf);
     }
     @font-face{
       font-family: Titillium-Light;
-      src: url(Fonts/Titillium_Web/TitilliumWeb-Light.ttf);
+      src: url(fonts/Titillium_Web/TitilliumWeb-Light.ttf);
     }
     @font-face{
       font-family: Titillium-Regular;
-      src: url(Fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+      src: url(fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
     }
     @font-face{
       font-family: Titillium-SemiBold;
-      src: url(Fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf);
+      src: url(fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf);
     }
     .imageWrapper {
       width:100%; 
@@ -72,13 +77,13 @@
       <nav class="navbar navbar-light" style="background-color: #93dc4c;">
         <ul class="navbar-nav mr-auto" style="flex-direction:row;">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Sources</a>
+            <a class="nav-link" href="#sources">Sources</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Data</a>
+            <a class="nav-link" href="#chart1">Data</a>
           </li>
         </ul>
         <h1>The Global Coffee Trade</h1>
@@ -135,26 +140,22 @@
       <div class="imageWrapper">
         <img src="style/images/coffeefields_Columbia.PNG" style="width:100%;" alt="Coffee Fields in Colombia">
       </div>
-      <div class="chart-item" id="chart3">
+      <div class="chart-item">
         <h1>Trade: Import and Export</h1>
         <p style="text-align:center; padding:2em;">With exports forecasted to continue sliding to a 5 year low and consumption expected to continue growing, the market has a few challenges to face.  In this global map chart the red color represents the regions of the world with higher import records and consumption.  The areas of the map represented in the green mark regions of the world that have high export records and often lower records of consumption.  
           Environmental changes like above average temperatures and prolonged dry spells can make for unstable sourcing.  The fungus that causes “Coffee Rust” has plagued growers for more than a century.  The high pressure to produce volume can be detrimental to agricultural communities where coffee production is their main source of income, health and livelihood.  
           One trend in the current coffee culture that brings promise to a complicated economy is the Direct Trade movement.  This model has roasters buying straight from the growers, the collaboration allows them to document and analyze every step of the process.  They are then able to fine tune and plan for a changing global climate and unforeseen obstacles in development.  This effort elevates the expertise of the growers and supports the local economy with fair trade wages and room for growth.  These relationships take time and money to foster but have the potential to address issues of herbicides and pesticides, disposal of wastewater and maintenance of forest cover.  Overall supporting a healthy biodiversity and a sustained source of some of the finest single origin coffees.<br><br>
           This chart shows the world's coffee bean importers and exporters, with red representing import and green respresenting export.  The darker the shade, the larger the scale of import/export (again measured in 60kg bags).
         </p>
-          <div class="chart-holder">
-              <div id="importExportWrapper">
-                <div id="importExportMap"></div>
-              </div>
-          </div>
       </div>
-    </div>
+      </div>
+      <div id="importExportMap" style="width:100%; margin-bottom:8em;"></div>
   </main>
   <footer>
     <p>Data Visualization: The Global Coffee Trade</p>
     <p>Luke Pilon, Angie Toner, Will Pellegrene</p>
     <p>Sources:</p>
-    <div id="Sources">
+    <div id="sources">
         <div class="source">
           <a href="https://www.fas.usda.gov/data/coffee-world-markets-and-trade">USDA Coffee Trade Data</a>
         </div>
@@ -171,7 +172,6 @@
           <a href="https://driftaway.coffee/arabica-robusta/">Driftaway Coffee</a>
         </div>
       </div>
-  
   </footer>
   <script src="js/charts.js"></script>
 </body>

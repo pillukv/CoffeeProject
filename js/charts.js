@@ -1,3 +1,4 @@
+//Data objects
 var coffeeData = [
   {
     "Commodity": "Coffee",
@@ -2161,7 +2162,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2003,
     "Arabica_production": 11712,
     "Bean_Export": 9808,
@@ -2173,7 +2174,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2004,
     "Arabica_production": 11053,
     "Bean_Export": 9484,
@@ -2185,7 +2186,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2005,
     "Arabica_production": 11532,
     "Bean_Export": 10625,
@@ -2197,7 +2198,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2006,
     "Arabica_production": 11953,
     "Bean_Export": 9855,
@@ -2209,7 +2210,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2007,
     "Arabica_production": 12164,
     "Bean_Export": 10460,
@@ -2221,7 +2222,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2008,
     "Arabica_production": 12515,
     "Bean_Export": 10770,
@@ -2233,7 +2234,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2009,
     "Arabica_production": 8664,
     "Bean_Export": 8160,
@@ -2245,7 +2246,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2010,
     "Arabica_production": 8100,
     "Bean_Export": 6445,
@@ -2257,7 +2258,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2011,
     "Arabica_production": 8525,
     "Bean_Export": 7400,
@@ -2269,7 +2270,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2012,
     "Arabica_production": 7655,
     "Bean_Export": 6675,
@@ -2281,7 +2282,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2013,
     "Arabica_production": 9927,
     "Bean_Export": 8100,
@@ -2293,7 +2294,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2014,
     "Arabica_production": 12075,
     "Bean_Export": 10300,
@@ -2305,7 +2306,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2015,
     "Arabica_production": 13000,
     "Bean_Export": 11615,
@@ -2317,7 +2318,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2016,
     "Arabica_production": 14000,
     "Bean_Export": 11490,
@@ -2329,7 +2330,7 @@ var coffeeData = [
   },
   {
     "Commodity": "Coffee",
-    "Country": "Columbia",
+    "Country": "Colombia",
     "Market_Year": 2017,
     "Arabica_production": 14600,
     "Bean_Export": 12700,
@@ -14761,24 +14762,36 @@ var coffeeData = [
   }
 ]
 
-//Creating an array of data objects from 2017 that will be used in charts 1 and 3
-var array2017 = [];
-for (i = 0; i < coffeeData.length; i++) {
-    if (coffeeData[i].Market_Year == 2017) {
-      array2017.push(coffeeData[i]);
-    }
-}; 
-
+//Function to create the coffee bean import pie chart (chart #1)
 function createBeanImportChart() {
-  //Sort the 2017 array by the 'Bean_Import' property and reverse it so it is in descending order
-  array2017.sort(function(a, b){ return a.Bean_Import - b.Bean_Import });
-  array2017.reverse();
+  //Create an array of data objects from 2017, as this chart will only be displaying data for that year.     
+  var array2017 = [];
+  for (i = 0; i < coffeeData.length; i++) {
+      if (coffeeData[i].Market_Year == 2017) {
+        array2017.push(coffeeData[i]);
+      }
+  }; 
 
-  //Creating array of values for the Bean_Import chart
-  /*Any countries with a Bean_Import value greater than the cutoff value will have their
-  own index in the array, which corresponds to a section of the pie chart.*/
-  /*Every value below the cutoff will be added to otherTotal, which will be the last index
-  in the array and corresponds to the 'Other' section of the pie chart.*/
+  //Function for sorting array2017 by the Bean_Import property, using a Bubble Sort algorithm
+  function bubbleSort(array){
+    var length = array.length;
+    for (i = 0; i < length; i++) { //number of passes through the array of values
+      for (x = 0; x < length - i - 1; x++){
+        if (array[x].Bean_Import < array[x+1].Bean_Import){
+          var temp = array[x];
+          array[x] = array[x+1];
+          array[x+1] = temp;
+        }
+      }
+    }
+  }
+  bubbleSort(array2017);
+  console.log(array2017);
+
+  //Creating array of values for the bean import chart
+  //Since we only want the chart to display data for the largest importers, we have a selected a "cutoff value."  
+  //Any country that imports an amount of beans greater than the cutoff value will be displayed individually in the chart.
+  //Any country below the cutoff amount will be placed into an 'other' category that will also be displayed.
   var beanImportChartData = [];
   const beanImportCutoff = 1300
   var otherTotal = 0; 
@@ -14791,7 +14804,7 @@ function createBeanImportChart() {
   }
   beanImportChartData.push(otherTotal);  
 
-  //Array of labels that parallels the data array.
+  //Array of labels that is linked with the values in the data array.
   //All values except the last ('Other') come from the coffee data objects.
   var beanImportChartLabels = [];
   for (i = 0; i < (beanImportChartData.length - 1); i++) {
@@ -14819,15 +14832,16 @@ function createBeanImportChart() {
 createBeanImportChart();
 
 function createBeanProductionChart(year) {
+  //Determine which year the user wants to see data for and grab each data object associated with that year.
   var beanProductionYear = document.getElementById("productionyearselect").value;
-  console.log(beanProductionYear);
   var yearArray = [];
   for (i = 0; i < coffeeData.length; i++) {
     if (coffeeData[i].Market_Year == beanProductionYear) {
       yearArray.push(coffeeData[i])
     }
   }
-  console.log(yearArray);
+  /*Similar to the import chart, there will be a cutoff value for this chart, since we only want to
+    display the largest producers*/
   var beanProductionArray = [];
   const BEAN_PRODUCTION_CUTOFF = 3000;
   for (i = 0; i < yearArray.length; i++) {
@@ -14835,7 +14849,8 @@ function createBeanProductionChart(year) {
       beanProductionArray.push(yearArray[i]);
     } 
   }
-  console.log(beanProductionArray);
+  /*Create three different arrays that will be used by the charting tool: One for country labels,
+    one for Arabica bean production, and one for Robusta bean production */
   var beanProductionChartLabels = [];
   var beanProductionArabica = [];
   var beanProductionRobusta = [];
@@ -14874,6 +14889,14 @@ function createBeanProductionChart(year) {
 document.getElementById("yearinput").addEventListener("click", createBeanProductionChart);
 
 function createImportExportMap() {
+  //Create an array of data objects from 2017, as this chart will only be displaying data for that year.     
+  var array2017 = [];
+  for (i = 0; i < coffeeData.length; i++) {
+      if (coffeeData[i].Market_Year == 2017) {
+        array2017.push(coffeeData[i]);
+      }
+  }; 
+  
   /*Charting library doesn't support the European Union region, so each country 
     in the EU will be set to have a net import/export value equal to that of the 
     EU for visualization purposes.*/
