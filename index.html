@@ -9,16 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
-    <!-- JavaScript Tools Used: -->
-    <!-- Google Charts -->
+    <!-- JavaScript Tools Used: Google Charts, JQuery, Popper.js, BootStrap, and Charts.js-->
     <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Popper.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <!-- BootStrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- Charts.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <style>
     /*Plant Theme
@@ -74,26 +69,26 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-light" style="background-color: #93dc4c;">
+      <nav class="navbar navbar-light">
         <ul class="navbar-nav mr-auto" style="flex-direction:row;">
           <li class="nav-item active">
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#sources">Sources</a>
+            <a class="nav-link" href="#chart1">Data</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#chart1">Data</a>
+            <a class="nav-link" href="#sources">Sources</a>
           </li>
         </ul>
         <h1>The Global Coffee Trade</h1>
       </nav>
   </header>
   <main>
-    <div class="jumbotron jumbotron-fluid" id="jumbo" style="background-color:#360;"></div>
+    <div class="jumbotron jumbotron-fluid" id="jumbo"></div>
     <div class="container-fluid" id="charts-container">
       <div id="introText">
-        <h4 style="text-align:center; padding-top:2em;">Cultivated in over 70 countries by thousands of independent farmers coffee is one of the oldest traded commodities in the world.  The rich history dates back to the 11th century with lore of a common herdsman observing their goat eating the red cherries growing on an unknown shrub.  The goats danced with excitement and the herdsman gathered up the cherries and brought them into the village.  The fruit at first glance was of little interest and seemed to lack value. Until cast into the fire when the cherry began to burn away and the sweet aroma of the first roasted bean began to rise.  Thus goes the story of the “Dancing Goats” and the discovery of a very stimulating and delicious humble bean.</h4>
+        <h4 style="text-align:center">Cultivated in over 70 countries by thousands of independent farmers coffee is one of the oldest traded commodities in the world.  The rich history dates back to the 11th century with lore of a common herdsman observing their goat eating the red cherries growing on an unknown shrub.  The goats danced with excitement and the herdsman gathered up the cherries and brought them into the village.  The fruit at first glance was of little interest and seemed to lack value. Until cast into the fire when the cherry began to burn away and the sweet aroma of the first roasted bean began to rise.  Thus goes the story of the “Dancing Goats” and the discovery of a very stimulating and delicious humble bean.</h4>
       </div>
       <div class="chart-item" id="chart1">
         <h1>Global Coffee Consumption</h1>

@@ -14849,7 +14849,7 @@ function createBeanProductionChart(year) {
       beanProductionArray.push(yearArray[i]);
     } 
   }
-  /*Create three different arrays that will be used by the charting tool: One for country labels,
+  /*Create three parallel arrays that will be used by the charting tool: One for country labels,
     one for Arabica bean production, and one for Robusta bean production */
   var beanProductionChartLabels = [];
   var beanProductionArabica = [];

@@ -43,6 +43,9 @@
   }
 
   /*NAV*/
+  nav {
+    background-color: #93dc4c;
+  }
   .nav-link{
     color:#ffec8b;
     font-family: Fugaz, Georgia;
@@ -69,8 +72,8 @@
 
   #jumbo{
     background-image: url("images/headerImg.jpg");
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     box-shadow: 0px 4px 20px 0px black;
     height: 450px;
   }
